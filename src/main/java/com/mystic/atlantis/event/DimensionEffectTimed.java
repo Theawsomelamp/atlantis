@@ -23,10 +23,5 @@ public class DimensionEffectTimed
                 player.addStatusEffect(new StatusEffectInstance(haste));
             }
         }
-
-        if(world.getRegistryKey() != DimensionAtlantis.ATLANTIS_WORLD_KEY){
-            player.removeStatusEffect(StatusEffects.WATER_BREATHING);
-            player.removeStatusEffect(StatusEffects.HASTE);
-        }
     }
 }
