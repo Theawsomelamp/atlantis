@@ -1,3 +1,4 @@
+
 package com.mystic.atlantis.event;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -22,6 +23,11 @@ public class DimensionEffectTimed
             if (!player.getStatusEffects().contains(haste)) {
                 player.addStatusEffect(new StatusEffectInstance(haste));
             }
+        }
+
+        if(world.getRegistryKey() != DimensionAtlantis.ATLANTIS_WORLD_KEY){
+            player.removeStatusEffect(StatusEffects.WATER_BREATHING);
+            player.removeStatusEffect(StatusEffects.HASTE);
         }
     }
 }
